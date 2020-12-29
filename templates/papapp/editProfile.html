@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Profile</title>
+  </head>
+  <body>
+    <form action="collegeApp/edit" method="post">
+      {% csrf_token %}
+      <input type="hidden" name="uid" value="{{user.id}}">
+      {{form}}
+      <input type="submit">
+    </form>
+  </body>
+</html>

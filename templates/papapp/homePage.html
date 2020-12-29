@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>This is the home page</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Demo html page</h1>
+      <div id="nav">
+        <a href="#">link1</a>
+        <a href="#">link2</a>
+        <a href="#">link3</a>
+      </div>
+    </div>
+    <div id="main">
+      <h2>Photo Gallery</h2>
+    </div>
+    {% csrf_token %}
+    <a href="/collegeApp/editProfile-user?uid={{user.id}}">Edit Profile</a>
+  </body>
+</html>

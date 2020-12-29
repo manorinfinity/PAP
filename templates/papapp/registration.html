@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Page</title>
+  </head>
+  <body>
+    <form action="collegeApp/register" method="post">
+      {% csrf_token %}
+      <input type="email" name="email" placeholder="Email"><br>
+      <input type="password" name="password" placeholder="password"><br>
+      <input type="text" name="first_name" placeholder="First name"><br>
+      <input type="text" name="last_name" placeholder="Last name"><br>
+      <input type="url" name="links" placeholder="Social media urls"><br>
+      <input type="text" name="bio" placeholder="Bio"><br>
+      <input type="radio" name="role" value="Student">Student<br>
+      <input type="radio" name="role" value="Alumni">Alumni<br>
+      <input type="radio" name="role" value="Faculty">Faculty<br>
+      <input type="submit">
+      </form>
+  </body>
+</html>
