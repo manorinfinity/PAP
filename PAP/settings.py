@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+<<<<<<< HEAD
 AUTH_USER_MODEL = 'papApp.User'
+=======
+AUTH_USER_MODEL = 'papapp.User'
+>>>>>>> 6b30efd432eae90e9f4fd1f45ce04608bebd9bc4
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
