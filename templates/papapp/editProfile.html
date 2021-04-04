@@ -5,11 +5,22 @@
     <title>Edit Profile</title>
   </head>
   <body>
-    <form action="collegeApp/edit" method="post">
+    {% if user.pfp.url is not None %}
+    <img src="{{user.pfp.url}}" alt="This is a image" height="200" width="200"><br>
+    {% else %}
+    <img src="" alt="This is a image" height="200" width="200"><br>
+    {% endif %}
+    <form action="collegeApp/edit" method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      <input type="hidden" name="uid" value="{{user.id}}">
-      {{form}}
+      <input type="hidden" name="uid" value="{{user.id}}"><br>
+      <input type="email" name="email" value="{{user.email}}"><br>
+      <input type="text" name="first_name" value="{{user.first_name}}"><br>
+      <input type="text" name="last_name" value="{{user.last_name}}"><br>
+      <input type="links" name="links" value="{{user.links}}"><br>
+      <input type="text" name="bio" value="{{user.bio}}"><br>
+      <input type="file" name="pfp"><br>
       <input type="submit">
     </form>
+    <a href="/collegeApp/home-user?uid={{user.id}}">Home</a>
   </body>
 </html>

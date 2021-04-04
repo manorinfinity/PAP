@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>View Events</title>
+  </head>
+  <body>
+    {% for event in events %}
+    {{event.title}}<br>
+    {{event.event_pic}}<br>
+    {{event.content}}<br>
+    {% endfor %}
+  </body>
+</html>
